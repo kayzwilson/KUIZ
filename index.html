@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KUIZ - Online Quiz Platform with Solutions & Classes</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" href="kuizlogo.png" type="image/png">
+</head>
+<body>
+    <a href="#classes">Online Classes <i class="fas fa-chevron-down"></i></a>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">KUIZ.COM</a>
+            <div class="nav-links">
+                <div class="dropdown">
+                    <button class="dropbtn">Quiz Categories <i class="fas fa-chevron-down"></i></button>
+                    <div class="dropdown-content">
+                        <a href="#subjects">By Subject</a>
+                        <a href="#competitions">Competitions</a>
+                        <a href="#">By Difficulty</a>
+                        <a href="#">Popular Quizzes</a>
+                    </div>
+                </div>
+                <a href="#solutions">Solutions</a>
+                <div class="dropdown">
+                    <button class="dropbtn">Online Classes <i class="fas fa-chevron-down"></i></button>
+                    <div class="dropdown-content">
+                        <a href="#subjects">Live Now</a>
+                        <a href="#competitions">Book Class</a>
+                        
+                    </div>
+                </div>
+                <a href="#competitions">Competitions</a>
+                
+                <div class="auth-buttons">
+                    <a href="#" class="btn-login"  onclick="openAuthModal()">Login / Signup</a>
+                    <a href="#" class="btn-trial">Start Free Trial</a>
+                </div>
+            </div>
+            <button class="hamburger">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Test Your Knowledge with KUIZ</h1>
+                <p>The ultimate online quiz platform with detailed solutions, live classes, and exciting competitions. Join thousands of learners improving daily.</p>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search for quizzes, subjects, or topics...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">10,000+</span>
+                        <span class="stat-label">Quizzes</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">500,000+</span>
+                        <span class="stat-label">Solutions</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">100+</span>
+                        <span class="stat-label">Daily Competitions</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1588072432836-e10032774350?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1472&q=80" alt="Students taking quiz">
+                <div class="quiz-badge">
+                    <div class="badge-content">
+                        <span>Live Quiz</span>
+                        <h4>Science Challenge</h4>
+                        <p>Starting in 15:32</p>
+                        <a href="#" class="btn-badge">Join Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quiz Categories Section -->
+   <!-- Enhanced Quiz Categories Section -->
+<section class="categories" id="subjects">
+    <div class="container">
+        <h2>Explore Quiz Categories</h2>
+        <p class="section-description">Choose from our wide range of quiz categories to test your knowledge and learn something new.</p>
+        
+        <div class="categories-slider">
+            <div class="category-card">
+                <div class="category-icon math">
+                    <i class="fas fa-square-root-alt"></i>
+                </div>
+                <h3>Mathematics</h3>
+                <p>From basic arithmetic to advanced calculus with step-by-step solutions.</p>
+                <div class="quiz-count">1,250 Quizzes</div>
+                <a href="#" class="btn-category">Start Quizzing</a>
+            </div>
+            <div class="category-card">
+                <div class="category-icon physics">
+                    <i class="fas fa-atom"></i>
+                </div>
+                <h3>Physics</h3>
+                <p>Mechanics, thermodynamics, electromagnetism and more.</p>
+                <div class="quiz-count">420 Quizzes</div>
+                <a href="#" class="btn-category">Start Quizzing</a>
+            </div>
+            <div class="category-card">
+                <div class="category-icon chemistry">
+                    <i class="fas fa-flask"></i>
+                </div>
+                <h3>Chemistry</h3>
+                <p>Organic, inorganic, physical chemistry with interactive experiments.</p>
+                <div class="quiz-count">380 Quizzes</div>
+                <a href="#" class="btn-category">Start Quizzing</a>
+            </div>
+            <div class="category-card">
+                <div class="category-icon biology">
+                    <i class="fas fa-dna"></i>
+                </div>
+                <h3>Biology</h3>
+                <p>Cell biology, genetics, ecology and human anatomy.</p>
+                <div class="quiz-count">350 Quizzes</div>
+                <a href="kuizbiology.html" target="_blank" class="btn-category">Start Quizzing</a>
+            </div>
+            <div class="category-card">
+                <div class="category-icon language">
+                    <i class="fas fa-language"></i>
+                </div>
+                <h3>Languages</h3>
+                <p>Improve grammar, vocabulary with pronunciation guides.</p>
+                <div class="quiz-count">750 Quizzes</div>
+                <a href="#" class="btn-category">Start Quizzing</a>
+            </div>
+            <div class="category-card">
+                <div class="category-icon history">
+                    <i class="fas fa-landmark"></i>
+                </div>
+                <h3>History</h3>
+                <p>Ancient civilizations, world wars, and historical events.</p>
+                <div class="quiz-count">450 Quizzes</div>
+                <a href="#" class="btn-category">Start Quizzing</a>
+            </div>
+        </div>
+        <div class="slider-controls">
+            <button class="slider-prev"><i class="fas fa-chevron-left"></i></button>
+            <button class="slider-next"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </div>
+</section>
+
+<!-- Enhanced Quiz Champions Section -->
+<section class="champions">
+    <div class="container">
+        <div class="section-header">
+            <h2>Top Quiz Champions</h2>
+            <p>Our highest scoring players this month</p>
+        </div>
+        <div class="champions-grid">
+            <div class="champion-card">
+                <div class="champion-rank">1</div>
+                <div class="champion-avatar">
+                    <img src="https://randomuser.me/api/portraits/men/22.jpg" alt="QuizMaster99">
+                    <div class="crown"><i class="fas fa-crown"></i></div>
+                </div>
+                <div class="champion-info">
+                    <h4>QuizMaster99</h4>
+                    <div class="champion-stats">
+                        <span class="points">12,450 pts</span>
+                        <div class="badges">
+                            <i class="fas fa-trophy gold"></i>
+                            <i class="fas fa-medal silver"></i>
+                            <i class="fas fa-award bronze"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="champion-subjects">
+                    <span class="subject-badge math">Math</span>
+                    <span class="subject-badge physics">Physics</span>
+                </div>
+            </div>
+            <div class="champion-card">
+                <div class="champion-rank">2</div>
+                <div class="champion-avatar">
+                    <img src="https://randomuser.me/api/portraits/women/35.jpg" alt="ScienceWhiz">
+                    <div class="crown"><i class="fas fa-crown"></i></div>
+                </div>
+                <div class="champion-info">
+                    <h4>ScienceWhiz</h4>
+                    <div class="champion-stats">
+                        <span class="points">11,890 pts</span>
+                        <div class="badges">
+                            <i class="fas fa-trophy gold"></i>
+                            <i class="fas fa-medal silver"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="champion-subjects">
+                    <span class="subject-badge chemistry">Chemistry</span>
+                    <span class="subject-badge biology">Biology</span>
+                </div>
+            </div>
+            <div class="champion-card">
+                <div class="champion-rank">3</div>
+                <div class="champion-avatar">
+                    <img src="https://randomuser.me/api/portraits/men/41.jpg" alt="MathGenius">
+                    <div class="crown"><i class="fas fa-crown"></i></div>
+                </div>
+                <div class="champion-info">
+                    <h4>MathGenius</h4>
+                    <div class="champion-stats">
+                        <span class="points">10,750 pts</span>
+                        <div class="badges">
+                            <i class="fas fa-trophy gold"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="champion-subjects">
+                    <span class="subject-badge math">Math</span>
+                    <span class="subject-badge physics">Physics</span>
+                </div>
+            </div>
+            <div class="champion-card">
+                <div class="champion-rank">4</div>
+                <div class="champion-avatar">
+                    <img src="https://randomuser.me/api/portraits/women/19.jpg" alt="HistoryBuff">
+                </div>
+                <div class="champion-info">
+                    <h4>HistoryBuff</h4>
+                    <div class="champion-stats">
+                        <span class="points">9,820 pts</span>
+                        <div class="badges">
+                            <i class="fas fa-medal silver"></i>
+                            <i class="fas fa-award bronze"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="champion-subjects">
+                    <span class="subject-badge history">History</span>
+                    <span class="subject-badge geography">Geography</span>
+                </div>
+            </div>
+        </div>
+        <div class="view-all">
+            <a href="#" class="btn-view-all">View Full Leaderboard <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </div>
+</section>
+
+    <!-- Quiz Solutions Section -->
+    <section class="solutions" id="solutions">
+        <div class="container">
+            <div class="section-header">
+                <h2>Detailed Quiz Solutions</h2>
+                <p>Don't just take quizzes - understand them with our comprehensive solutions.</p>
+            </div>
+            <div class="solutions-content">
+                <div class="solutions-image">
+                    <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Quiz solutions">
+                </div>
+                <div class="solutions-features">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <div class="feature-text">
+                            <h4>Step-by-Step Explanations</h4>
+                            <p>Understand exactly how to solve each problem with detailed breakdowns.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-video"></i>
+                        </div>
+                        <div class="feature-text">
+                            <h4>Video Solutions</h4>
+                            <p>Watch expert tutors explain complex concepts in easy-to-follow videos.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-chart-bar"></i>
+                        </div>
+                        <div class="feature-text">
+                            <h4>Performance Analytics</h4>
+                            <p>See which areas need improvement with personalized reports.</p>
+                        </div>
+                    </div>
+                    <a href="#" class="btn btn-primary p-3">Explore Solutions</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Online Classes Section -->
+    <section class="online-classes" id="classes">
+        <div class="container">
+            <div class="section-header">
+                <h2>Live & Recorded Online Classes</h2>
+                <p>Learn from expert instructors in interactive virtual classrooms.</p>
+            </div>
+            <div class="classes-tabs">
+                <button class="tab-btn active" data-tab="live">Live Classes</button>
+                <button class="tab-btn" data-tab="recorded">Recorded Courses</button>
+                <button class="tab-btn" data-tab="upcoming">Upcoming</button>
+            </div>
+            <div class="classes-content">
+                <div class="tab-panel active" id="live">
+                    <div class="classes-grid">
+                        <div class="class-card">
+                            <div class="class-badge live">Live Now</div>
+                            <img src="https://images.unsplash.com/photo-1546410531-bb4caa6b424d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80" alt="Math class">
+                            <div class="class-info">
+                                <h4>Advanced Algebra Masterclass</h4>
+                                <div class="class-meta">
+                                    <span><i class="far fa-clock"></i> 45 min left</span>
+                                    <span><i class="fas fa-user-graduate"></i> 128 students</span>
+                                </div>
+                                <div class="class-instructor">
+                                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Instructor">
+                                    <span>Prof. David Wilson</span>
+                                </div>
+                                <a href="#" class="btn-class">Join Class</a>
+                            </div>
+                        </div>
+                        <div class="class-card">
+                            <div class="class-badge starting">Starting Soon</div>
+                            <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Science class">
+                            <div class="class-info">
+                                <h4>Chemistry Lab Techniques</h4>
+                                <div class="class-meta">
+                                    <span><i class="far fa-clock"></i> Starts in 15 min</span>
+                                    <span><i class="fas fa-user-graduate"></i> 89 students</span>
+                                </div>
+                                <div class="class-instructor">
+                                    <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Instructor">
+                                    <span>Dr. Sarah Johnson</span>
+                                </div>
+                                <a href="#" class="btn-class">Join Waiting Room</a>
+                            </div>
+                        </div>
+                        <div class="class-card">
+                            <div class="class-badge live">Live Now</div>
+                            <img src="https://images.unsplash.com/photo-1546410531-bb4caa6b424d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80" alt="Language class">
+                            <div class="class-info">
+                                <h4>Spanish Conversation Practice</h4>
+                                <div class="class-meta">
+                                    <span><i class="far fa-clock"></i> 1 hr 10 min left</span>
+                                    <span><i class="fas fa-user-graduate"></i> 64 students</span>
+                                </div>
+                                <div class="class-instructor">
+                                    <img src="https://randomuser.me/api/portraits/women/28.jpg" alt="Instructor">
+                                    <span>Maria Gonzalez</span>
+                                </div>
+                                <a href="#" class="btn-class">Join Class</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-panel" id="recorded">
+                    <!-- Recorded courses content would go here -->
+                    <p class="empty-tab">Browse our library of recorded courses available anytime.</p>
+                </div>
+                <div class="tab-panel" id="upcoming">
+                    <!-- Upcoming classes content would go here -->
+                    <p class="empty-tab">View our schedule of upcoming classes and set reminders.</p>
+                </div>
+            </div>
+            <div class="view-all">
+                <a href="#" class="btn-view-all">View All Classes <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Competitions Section -->
+    <section class="competitions" id="competitions">
+        <div class="container">
+            <div class="section-header">
+                <h2>Quiz Competitions & Leaderboards</h2>
+                <p>Test your skills against others and climb the leaderboards!</p>
+            </div>
+            <div class="competitions-grid">
+                <div class="competition-card featured">
+                    <div class="competition-tag">Featured</div>
+                    <div class="competition-content">
+                        <div class="competition-prize">
+                            <span>Prize Pool</span>
+                            <h3>$5,000</h3>
+                        </div>
+                        <h4>National Science Challenge</h4>
+                        <div class="competition-meta">
+                            <span><i class="far fa-calendar-alt"></i> May 15-30, 2023</span>
+                            <span><i class="fas fa-users"></i> 2,450 participants</span>
+                        </div>
+                        <p>Compete in this nationwide science competition covering biology, chemistry, and physics.</p>
+                        <div class="competition-cta">
+                            <a href="#" class="btn-competition">Register Now</a>
+                            <a href="#" class="btn-outline">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="competition-card">
+                    <div class="competition-content">
+                        <h4>Daily Math Sprint</h4>
+                        <div class="competition-meta">
+                            <span><i class="far fa-calendar-alt"></i> Every Day</span>
+                            <span><i class="fas fa-users"></i> 850 avg. participants</span>
+                        </div>
+                        <p>15-minute timed math challenge with questions ranging from basic to advanced.</p>
+                        <div class="competition-cta">
+                            <a href="#" class="btn-competition">Join Today's Sprint</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="competition-card">
+                    <div class="competition-content">
+                        <h4>Language Masters Tournament</h4>
+                        <div class="competition-meta">
+                            <span><i class="far fa-calendar-alt"></i> June 1-7, 2023</span>
+                            <span><i class="fas fa-users"></i> 1,200 registered</span>
+                        </div>
+                        <p>Weekly tournament testing grammar, vocabulary, and comprehension in 5 languages.</p>
+                        <div class="competition-cta">
+                            <a href="#" class="btn-competition">Register Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <h2>Why Learners Choose KUIZ</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <h3>Unlimited Quizzes</h3>
+                    <p>Access thousands of quizzes across all subjects and difficulty levels.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>Detailed Solutions</h3>
+                    <p>Learn from comprehensive explanations for every question.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                    </div>
+                    <h3>Expert-Led Classes</h3>
+                    <p>Join live classes or watch recorded sessions from top instructors.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3>Exciting Competitions</h3>
+                    <p>Compete for prizes and climb the leaderboards.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Progress Tracking</h3>
+                    <p>Monitor your improvement with detailed analytics.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Mobile Friendly</h3>
+                    <p>Learn on the go with our mobile-optimized platform.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Challenge Yourself?</h2>
+                <p>Join thousands of learners improving their knowledge daily with KUIZ.</p>
+                <div class="cta-buttons">
+                    <a href="#" class="btn-primary">Start Free Trial</a>
+                    <a href="#" class="btn-secondary">Browse Quizzes</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Modal Overlay (hidden by default) -->
+<div class="modal-overlay" id="authModal">
+    <div class="modal-content">
+      <!-- Close Button -->
+      <span class="close-modal">&times;</span>
+  
+      <!-- Tabs for Login/Signup -->
+      <div class="auth-tabs">
+        <button class="tab-btn active" id="loginTab">Login</button>
+        <button class="tab-btn" id="signupTab">Sign Up</button>
+      </div>
+  
+      <!-- Login Form -->
+      <form class="auth-form active" id="loginForm">
+        <input type="email" placeholder="Email" required>
+        <input type="password" placeholder="Password" required>
+        <a href="https://acounts.google.com"><button class="log-but"> <img src="google.png" alt="google image" width="25" height="25">Login with Google Account</button></a>
+        <button class="log-but"> <img src="icloud.png" alt="icloud image" width="25" height="25">Login with iCloud</button>
+        <button type="submit" class="submit-btn">Login</button>
+      </form>
+  
+      <!-- Signup Form -->
+      <form class="auth-form" id="signupForm">
+        <input type="text" placeholder="Username" required>
+        <input type="email" placeholder="Email" required>
+        <input type="password" placeholder="Password" required>
+        <input type="password" placeholder="Confirm Password" required>
+        <button class="log-but"> <img src="google.png" alt="google image" width="25" height="25">SignUp with Google Account</button>
+        <button class="log-but"> <img src="icloud.png" alt="icloud image" width="25" height="25">SignUp with iCloud</button>
+        <button type="submit" class="submit-btn">Sign Up</button>
+      </form>
+    </div>
+  </div>
+ 
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>KUIZ.COM</h3>
+                    <p>The ultimate online quiz platform with solutions, classes, and competitions.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quiz Categories</h4>
+                    <ul>
+                        <li><a href="#">Mathematics</a></li>
+                        <li><a href="#">Science</a></li>
+                        <li><a href="#">Languages</a></li>
+                        <li><a href="#">Social Studies</a></li>
+                        <li><a href="#">Professional</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Features</h4>
+                    <ul>
+                        <li><a href="#">Quiz Solutions</a></li>
+                        <li><a href="#">Online Classes</a></li>
+                        <li><a href="#">Competitions</a></li>
+                        <li><a href="#">Leaderboards</a></li>
+                        <li><a href="#">Progress Tracking</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Newsletter</h4>
+                    <p>Subscribe for quiz updates and learning tips.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your Email Address">
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 KUIZ.COM. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+</html>

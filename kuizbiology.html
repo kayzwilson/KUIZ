@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kuiz Biology | Test Your Knowledge</title>
+  <link rel="stylesheet" href="kuizbiology.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav>
+    <div class="logo">
+      <span class="kuiz">Kuiz</span><span class="biology">Biology</span>
+    </div>
+    <div class="nav-links">
+      <a href="#" class="active">Home</a>
+      <a href="#">Quizzes</a>
+      <a href="#">Leaderboard</a>
+      <a href="#" id="authBtn">Login/Signup</a>
+      <!-- Add this near your navbar/login button -->
+       <button id="darkModeToggle" class="dark-mode-btn">
+         <i class="fas fa-moon"></i> Dark Mode
+       </button>
+    </div>
+    <button class="hamburger">
+      <i class="fas fa-bars"></i>
+  </button>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="hero-content">
+      <h1>Test Your <span class="highlight">Biology</span> Knowledge</h1>
+      <p>Challenge yourself with quizzes designed for all levels.</p>
+      <div class="cta-group">
+        <a href="biologykuiz.html"><button class="cta-btn">Start Quiz</button></a>
+        <button class="leaderboard cta-btn-outline">View Leaderboard</button>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="microscope.jpg" alt="Biology Illustration">
+    </div>
+  </header>
+  
+  <div class="about">
+    <div class="about_quiz">
+      <h2>How To Play</h2>
+      <hr>
+      <ol>
+        <li>Question contains four options</li>
+        <li>Choose one correct option and click Next</li>
+        <li>Final Score will be displayed on the last Page</li>
+      </ol>
+    </div>
+    <div class="img_container">
+      <img src="biology.jpg" alt="biology kuiz">
+    </div>
+  </div>
+
+  <!-- Quiz Options -->
+  <section class="quiz-options">
+    <div class="option-card">
+      <h3>Level</h3>
+      <select id="level">
+        <option value="beginner">Beginner</option>
+        <option value="intermediate">Intermediate</option>
+        <option value="advanced">Advanced</option>
+      </select>
+    </div>
+    <div class="option-card">
+      <h3>Language</h3>
+      <select id="language">
+        <option value="english">English</option>
+        <option value="spanish">Spanish</option>
+        <option value="french">French</option>
+      </select>
+    </div>
+    <div class="option-card">
+      <h3>Topics</h3>
+      <select id="topic">
+        <option value="cell-biology">Cell Biology</option>
+        <option value="genetics">Genetics</option>
+        <option value="ecology">Ecology</option>
+      </select>
+    </div>
+  </section>
+
+  <section class="quick-start">
+    <h2>Quick Start</h2>
+    <div class="quiz-cards">
+      <div class="quiz-card">
+        <h3>Cell Biology</h3>
+        <p>10 Questions • Beginner</p>
+        <button>Start</button>
+      </div>
+      <div class="quiz-card">
+        <h3>Genetics</h3>
+        <p>15 Questions • Intermediate</p>
+        <button>Start</button>
+      </div>
+    </div>
+  </section>
+
+  <div class="progress-container">
+    <p>Your Progress: <span>25% Complete</span></p>
+    <div class="progress-bar">
+      <div class="progress-fill" style="width: 25%"></div>
+    </div>
+  </div>
+  
+ 
+  <!-- Features -->
+  <section class="features">
+    <h2>Why Kuiz Biology?</h2>
+    <div class="features-grid">
+      <div class="feature-card">
+        <img src="microscope.jpg" alt="Microscope Icon">
+        <h4>100+ Questions</h4>
+        <p>Curated by experts to test your understanding.</p>
+      </div>
+      <div class="feature-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/3132/3132693.png" alt="Leaderboard Icon">
+        <h4>Compete Globally</h4>
+        <p>Climb the leaderboard and earn badges.</p>
+      </div>
+      <div class="feature-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/2936/2936886.png" alt="Mobile Icon">
+        <h4>Mobile-Friendly</h4>
+        <p>Learn on the go with our responsive design.</p>
+      </div>
+    </div>
+  </section>
+ 
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2024 Kuiz Biology. All rights reserved.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="kuizbiology.js"></script>
+</body>
+</html>
