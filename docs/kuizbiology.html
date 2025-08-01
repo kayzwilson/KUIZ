@@ -20,11 +20,17 @@
       background-clip: text;
       color: transparent;
     }
+    .dark .gradient-text-dark {
+      background: linear-gradient(90deg, #93c5fd, #6ee7b7);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
   </style>
 </head>
-<body class="bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300">
+<body class="bg-white text-gray-800 transition-colors duration-300">
   <!-- Navbar -->
-  <nav class="bg-white dark:bg-gray-800 shadow-md py-4 px-6 sticky top-0 z-50">
+  <nav class="bg-white shadow-md py-4 px-6 sticky top-0 z-50 dark:bg-gray-800">
     <div class="max-w-7xl mx-auto flex justify-between items-center">
       <div class="flex items-center">
         <span class="text-2xl font-bold">
@@ -34,16 +40,16 @@
       </div>
       
       <div class="hidden md:flex items-center space-x-8">
-        <a href="#" class="font-medium text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300">Home</a>
-        <a href="#" class="font-medium text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition">Quizzes</a>
-        <a href="#" class="font-medium text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition">Leaderboard</a>
-        <a href="#" id="authBtn" class="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition">Login/Signup</a>
-        <button id="darkModeToggle" class="flex items-center text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition">
+        <a href="#" class="font-medium text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300">Home</a>
+        <a href="#" class="font-medium text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 transition">Quizzes</a>
+        <a href="#" class="font-medium text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 transition">Leaderboard</a>
+        <a href="#" id="authBtn" class="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition dark:bg-blue-700 dark:hover:bg-blue-600">Login/Signup</a>
+        <button id="darkModeToggle" class="flex items-center text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 transition">
           <i class="fas fa-moon mr-2"></i> Dark Mode
         </button>
       </div>
       
-      <button class="md:hidden text-gray-600 dark:text-gray-300">
+      <button class="md:hidden text-gray-700 dark:text-gray-300">
         <i class="fas fa-bars text-2xl"></i>
       </button>
     </div>
@@ -53,16 +59,16 @@
   <header class="max-w-7xl mx-auto px-6 py-16 md:py-24 flex flex-col md:flex-row items-center">
     <div class="md:w-1/2 mb-12 md:mb-0 md:pr-10">
       <h1 class="text-4xl md:text-5xl font-bold mb-6">
-        Test Your <span class="gradient-text">Biology</span> Knowledge
+        Test Your <span class="gradient-text dark:gradient-text-dark">Biology</span> Knowledge
       </h1>
       <p class="text-lg text-gray-600 dark:text-gray-300 mb-8">
         Challenge yourself with expertly crafted quizzes designed for all levels, from beginners to advanced learners.
       </p>
       <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-        <a href="biologykuiz.html" class="px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg shadow-md transition duration-300 text-center">
+        <a href="biologykuiz.html" class="px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg shadow-md transition duration-300 text-center dark:bg-blue-700 dark:hover:bg-blue-600">
           Start Quiz <i class="fas fa-arrow-right ml-2"></i>
         </a>
-        <button class="px-8 py-3 border-2 border-blue-600 text-blue-600 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-gray-800 font-medium rounded-lg shadow-sm transition duration-300">
+        <button class="px-8 py-3 border-2 border-blue-600 text-blue-600 hover:bg-blue-50 font-medium rounded-lg shadow-sm transition duration-300 dark:border-blue-400 dark:text-blue-400 dark:hover:bg-gray-800">
           View Leaderboard
         </button>
       </div>
@@ -73,22 +79,22 @@
   </header>
   
   <!-- How To Play Section -->
-  <section class="bg-gray-100 dark:bg-gray-800 py-16">
+  <section class="bg-gray-50 py-16 dark:bg-gray-800">
     <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center">
       <div class="md:w-1/2 mb-12 md:mb-0 md:pr-10">
-        <h2 class="text-3xl font-bold mb-6">How To Play</h2>
+        <h2 class="text-3xl font-bold mb-6 dark:text-white">How To Play</h2>
         <div class="h-1 w-20 bg-gradient-to-r from-blue-500 to-emerald-500 mb-8 rounded-full"></div>
         <ol class="space-y-4">
           <li class="flex items-start">
-            <span class="flex-shrink-0 flex items-center justify-center bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400 rounded-full w-8 h-8 mr-4 font-bold">1</span>
+            <span class="flex-shrink-0 flex items-center justify-center bg-blue-100 text-blue-600 rounded-full w-8 h-8 mr-4 font-bold dark:bg-blue-900 dark:text-blue-400">1</span>
             <span class="text-lg text-gray-700 dark:text-gray-300">Each question contains four possible options</span>
           </li>
           <li class="flex items-start">
-            <span class="flex-shrink-0 flex items-center justify-center bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400 rounded-full w-8 h-8 mr-4 font-bold">2</span>
+            <span class="flex-shrink-0 flex items-center justify-center bg-blue-100 text-blue-600 rounded-full w-8 h-8 mr-4 font-bold dark:bg-blue-900 dark:text-blue-400">2</span>
             <span class="text-lg text-gray-700 dark:text-gray-300">Select the correct answer and click Next to proceed</span>
           </li>
           <li class="flex items-start">
-            <span class="flex-shrink-0 flex items-center justify-center bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400 rounded-full w-8 h-8 mr-4 font-bold">3</span>
+            <span class="flex-shrink-0 flex items-center justify-center bg-blue-100 text-blue-600 rounded-full w-8 h-8 mr-4 font-bold dark:bg-blue-900 dark:text-blue-400">3</span>
             <span class="text-lg text-gray-700 dark:text-gray-300">Your final score will be displayed at the end</span>
           </li>
         </ol>
@@ -101,45 +107,45 @@
 
   <!-- Quiz Options -->
   <section class="py-16 max-w-7xl mx-auto px-6">
-    <h2 class="text-3xl font-bold mb-12 text-center">Customize Your Quiz Experience</h2>
+    <h2 class="text-3xl font-bold mb-12 text-center dark:text-white">Customize Your Quiz Experience</h2>
     
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md p-6 hover:shadow-lg transition-shadow">
+      <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition-shadow dark:bg-gray-800">
         <div class="flex items-center mb-4">
-          <div class="bg-blue-100 dark:bg-blue-900 p-3 rounded-lg mr-4">
-            <i class="fas fa-chart-line text-blue-600 dark:text-blue-400 text-xl"></i>
+          <div class="bg-blue-100 p-3 rounded-lg mr-4 dark:bg-blue-900">
+            <i class="fas fa-chart-line text-blue-600 text-xl dark:text-blue-400"></i>
           </div>
-          <h3 class="text-xl font-semibold">Level</h3>
+          <h3 class="text-xl font-semibold dark:text-white">Level</h3>
         </div>
-        <select id="level" class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+        <select id="level" class="w-full px-4 py-2 border border-gray-300 rounded-lg bg-white focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white">
           <option value="beginner">Beginner</option>
           <option value="intermediate">Intermediate</option>
           <option value="advanced">Advanced</option>
         </select>
       </div>
       
-      <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md p-6 hover:shadow-lg transition-shadow">
+      <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition-shadow dark:bg-gray-800">
         <div class="flex items-center mb-4">
-          <div class="bg-emerald-100 dark:bg-emerald-900 p-3 rounded-lg mr-4">
-            <i class="fas fa-globe text-emerald-600 dark:text-emerald-400 text-xl"></i>
+          <div class="bg-emerald-100 p-3 rounded-lg mr-4 dark:bg-emerald-900">
+            <i class="fas fa-globe text-emerald-600 text-xl dark:text-emerald-400"></i>
           </div>
-          <h3 class="text-xl font-semibold">Language</h3>
+          <h3 class="text-xl font-semibold dark:text-white">Language</h3>
         </div>
-        <select id="language" class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+        <select id="language" class="w-full px-4 py-2 border border-gray-300 rounded-lg bg-white focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white">
           <option value="english">English</option>
           <option value="spanish">Spanish</option>
           <option value="french">French</option>
         </select>
       </div>
       
-      <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md p-6 hover:shadow-lg transition-shadow">
+      <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition-shadow dark:bg-gray-800">
         <div class="flex items-center mb-4">
-          <div class="bg-purple-100 dark:bg-purple-900 p-3 rounded-lg mr-4">
-            <i class="fas fa-book-open text-purple-600 dark:text-purple-400 text-xl"></i>
+          <div class="bg-purple-100 p-3 rounded-lg mr-4 dark:bg-purple-900">
+            <i class="fas fa-book-open text-purple-600 text-xl dark:text-purple-400"></i>
           </div>
-          <h3 class="text-xl font-semibold">Topics</h3>
+          <h3 class="text-xl font-semibold dark:text-white">Topics</h3>
         </div>
-        <select id="topic" class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+        <select id="topic" class="w-full px-4 py-2 border border-gray-300 rounded-lg bg-white focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white">
           <option value="cell-biology">Cell Biology</option>
           <option value="genetics">Genetics</option>
           <option value="ecology">Ecology</option>
@@ -149,41 +155,41 @@
   </section>
 
   <!-- Quick Start Section -->
-  <section class="bg-gray-100 dark:bg-gray-800 py-16">
+  <section class="bg-gray-50 py-16 dark:bg-gray-800">
     <div class="max-w-7xl mx-auto px-6">
-      <h2 class="text-3xl font-bold mb-12 text-center">Quick Start Quizzes</h2>
+      <h2 class="text-3xl font-bold mb-12 text-center dark:text-white">Quick Start Quizzes</h2>
       
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <div class="bg-white dark:bg-gray-700 rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-transform duration-300 hover:-translate-y-1">
+        <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-transform duration-300 hover:-translate-y-1 dark:bg-gray-700">
           <div class="h-48 bg-gradient-to-r from-blue-500 to-blue-600 flex items-center justify-center">
             <i class="fas fa-microscope text-white text-6xl"></i>
           </div>
           <div class="p-6">
-            <h3 class="text-xl font-bold mb-2">Cell Biology</h3>
-            <p class="text-gray-600 dark:text-gray-300 mb-4">10 Questions • Beginner</p>
-            <button class="w-full py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition">Start Now</button>
+            <h3 class="text-xl font-bold mb-2 dark:text-white">Cell Biology</h3>
+            <p class="text-gray-600 mb-4 dark:text-gray-300">10 Questions • Beginner</p>
+            <button class="w-full py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition dark:bg-blue-700 dark:hover:bg-blue-600">Start Now</button>
           </div>
         </div>
         
-        <div class="bg-white dark:bg-gray-700 rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-transform duration-300 hover:-translate-y-1">
+        <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-transform duration-300 hover:-translate-y-1 dark:bg-gray-700">
           <div class="h-48 bg-gradient-to-r from-emerald-500 to-emerald-600 flex items-center justify-center">
             <i class="fas fa-dna text-white text-6xl"></i>
           </div>
           <div class="p-6">
-            <h3 class="text-xl font-bold mb-2">Genetics</h3>
-            <p class="text-gray-600 dark:text-gray-300 mb-4">15 Questions • Intermediate</p>
-            <button class="w-full py-2 bg-emerald-600 hover:bg-emerald-700 text-white rounded-lg transition">Start Now</button>
+            <h3 class="text-xl font-bold mb-2 dark:text-white">Genetics</h3>
+            <p class="text-gray-600 mb-4 dark:text-gray-300">15 Questions • Intermediate</p>
+            <button class="w-full py-2 bg-emerald-600 hover:bg-emerald-700 text-white rounded-lg transition dark:bg-emerald-700 dark:hover:bg-emerald-600">Start Now</button>
           </div>
         </div>
         
-        <div class="bg-white dark:bg-gray-700 rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-transform duration-300 hover:-translate-y-1">
+        <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-transform duration-300 hover:-translate-y-1 dark:bg-gray-700">
           <div class="h-48 bg-gradient-to-r from-purple-500 to-purple-600 flex items-center justify-center">
             <i class="fas fa-leaf text-white text-6xl"></i>
           </div>
           <div class="p-6">
-            <h3 class="text-xl font-bold mb-2">Ecology</h3>
-            <p class="text-gray-600 dark:text-gray-300 mb-4">12 Questions • Intermediate</p>
-            <button class="w-full py-2 bg-purple-600 hover:bg-purple-700 text-white rounded-lg transition">Start Now</button>
+            <h3 class="text-xl font-bold mb-2 dark:text-white">Ecology</h3>
+            <p class="text-gray-600 mb-4 dark:text-gray-300">12 Questions • Intermediate</p>
+            <button class="w-full py-2 bg-purple-600 hover:bg-purple-700 text-white rounded-lg transition dark:bg-purple-700 dark:hover:bg-purple-600">Start Now</button>
           </div>
         </div>
       </div>
@@ -192,10 +198,10 @@
 
   <!-- Progress Section -->
   <section class="py-16 max-w-7xl mx-auto px-6">
-    <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md p-8">
-      <h3 class="text-xl font-semibold mb-4">Your Learning Progress</h3>
-      <p class="text-gray-600 dark:text-gray-300 mb-2">25% Complete</p>
-      <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-4 mb-4">
+    <div class="bg-white rounded-xl shadow-md p-8 dark:bg-gray-800">
+      <h3 class="text-xl font-semibold mb-4 dark:text-white">Your Learning Progress</h3>
+      <p class="text-gray-600 mb-2 dark:text-gray-300">25% Complete</p>
+      <div class="w-full bg-gray-200 rounded-full h-4 mb-4 dark:bg-gray-700">
         <div class="bg-gradient-to-r from-blue-500 to-emerald-500 h-4 rounded-full" style="width: 25%"></div>
       </div>
       <p class="text-sm text-gray-500 dark:text-gray-400">Keep going! You've completed 5 of 20 recommended quizzes.</p>
@@ -203,39 +209,39 @@
   </section>
 
   <!-- Features Section -->
-  <section class="bg-gray-100 dark:bg-gray-800 py-16">
+  <section class="bg-gray-50 py-16 dark:bg-gray-800">
     <div class="max-w-7xl mx-auto px-6">
-      <h2 class="text-3xl font-bold mb-4 text-center">Why Choose Kuiz Biology?</h2>
-      <p class="text-xl text-gray-600 dark:text-gray-300 mb-12 text-center max-w-3xl mx-auto">
+      <h2 class="text-3xl font-bold mb-4 text-center dark:text-white">Why Choose Kuiz Biology?</h2>
+      <p class="text-xl text-gray-600 mb-12 text-center max-w-3xl mx-auto dark:text-gray-300">
         Our platform is designed to make learning biology engaging, effective, and fun.
       </p>
       
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div class="bg-white dark:bg-gray-700 p-8 rounded-xl shadow-md hover:shadow-lg transition">
-          <div class="bg-blue-100 dark:bg-blue-900 w-16 h-16 rounded-lg flex items-center justify-center mb-6">
-            <i class="fas fa-database text-blue-600 dark:text-blue-400 text-2xl"></i>
+        <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition dark:bg-gray-700">
+          <div class="bg-blue-100 w-16 h-16 rounded-lg flex items-center justify-center mb-6 dark:bg-blue-900">
+            <i class="fas fa-database text-blue-600 text-2xl dark:text-blue-400"></i>
           </div>
-          <h4 class="text-xl font-semibold mb-3">100+ Expert Questions</h4>
+          <h4 class="text-xl font-semibold mb-3 dark:text-white">100+ Expert Questions</h4>
           <p class="text-gray-600 dark:text-gray-300">
             Curated by biology educators to thoroughly test your understanding of key concepts.
           </p>
         </div>
         
-        <div class="bg-white dark:bg-gray-700 p-8 rounded-xl shadow-md hover:shadow-lg transition">
-          <div class="bg-emerald-100 dark:bg-emerald-900 w-16 h-16 rounded-lg flex items-center justify-center mb-6">
-            <i class="fas fa-trophy text-emerald-600 dark:text-emerald-400 text-2xl"></i>
+        <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition dark:bg-gray-700">
+          <div class="bg-emerald-100 w-16 h-16 rounded-lg flex items-center justify-center mb-6 dark:bg-emerald-900">
+            <i class="fas fa-trophy text-emerald-600 text-2xl dark:text-emerald-400"></i>
           </div>
-          <h4 class="text-xl font-semibold mb-3">Global Competition</h4>
+          <h4 class="text-xl font-semibold mb-3 dark:text-white">Global Competition</h4>
           <p class="text-gray-600 dark:text-gray-300">
             Climb the leaderboard, earn badges, and compare your scores with learners worldwide.
           </p>
         </div>
         
-        <div class="bg-white dark:bg-gray-700 p-8 rounded-xl shadow-md hover:shadow-lg transition">
-          <div class="bg-purple-100 dark:bg-purple-900 w-16 h-16 rounded-lg flex items-center justify-center mb-6">
-            <i class="fas fa-mobile-alt text-purple-600 dark:text-purple-400 text-2xl"></i>
+        <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition dark:bg-gray-700">
+          <div class="bg-purple-100 w-16 h-16 rounded-lg flex items-center justify-center mb-6 dark:bg-purple-900">
+            <i class="fas fa-mobile-alt text-purple-600 text-2xl dark:text-purple-400"></i>
           </div>
-          <h4 class="text-xl font-semibold mb-3">Learn Anywhere</h4>
+          <h4 class="text-xl font-semibold mb-3 dark:text-white">Learn Anywhere</h4>
           <p class="text-gray-600 dark:text-gray-300">
             Fully responsive design works perfectly on all devices, from phones to desktops.
           </p>
@@ -327,15 +333,51 @@
     // Dark mode toggle functionality
     const darkModeToggle = document.getElementById('darkModeToggle');
     const html = document.documentElement;
+    const icon = darkModeToggle.querySelector('i');
     
-    // Check for saved user preference
-    if (localStorage.getItem('darkMode') === 'true') {
-      html.classList.add('dark');
+    // Check for saved user preference or system preference
+    const savedMode = localStorage.getItem('darkMode');
+    const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    
+    // Set initial mode (default to light)
+    if (savedMode === 'true' || (savedMode === null && systemPrefersDark)) {
+      enableDarkMode();
+    } else {
+      disableDarkMode();
     }
     
+    // Toggle dark/light mode
     darkModeToggle.addEventListener('click', () => {
-      html.classList.toggle('dark');
-      localStorage.setItem('darkMode', html.classList.contains('dark'));
+      if (html.classList.contains('dark')) {
+        disableDarkMode();
+      } else {
+        enableDarkMode();
+      }
+    });
+    
+    function enableDarkMode() {
+      html.classList.add('dark');
+      icon.classList.replace('fa-moon', 'fa-sun');
+      darkModeToggle.innerHTML = '<i class="fas fa-sun mr-2"></i> Light Mode';
+      localStorage.setItem('darkMode', 'true');
+    }
+    
+    function disableDarkMode() {
+      html.classList.remove('dark');
+      icon.classList.replace('fa-sun', 'fa-moon');
+      darkModeToggle.innerHTML = '<i class="fas fa-moon mr-2"></i> Dark Mode';
+      localStorage.setItem('darkMode', 'false');
+    }
+    
+    // Watch for system preference changes
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+      if (localStorage.getItem('darkMode') === null) {
+        if (e.matches) {
+          enableDarkMode();
+        } else {
+          disableDarkMode();
+        }
+      }
     });
   </script>
 </body>
